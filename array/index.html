@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>while</title>
+    <title>array</title>
 
     <link rel="stylesheet" href="../assets/style.css">
 </head>
@@ -14,11 +14,14 @@
 
         <div class="frame__inner">
             <script>
-                let day = 0;
-                while(day <=365){
-                    day += 1;
-                    document.write(day + '日' + '<br>');
-                }
+                const week = ['月','火','水','木','金','土','日'];
+                let today = new Date();
+                let week_jp = week[today.getDay()];
+
+                document.write(week_jp + '曜日');
+
+
+                
             </script>
         </div>
     </div>
