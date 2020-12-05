@@ -14,14 +14,17 @@
 
         <div class="frame__inner">
             <script>
-                const week = ['月','火','水','木','金','土','日'];
-                let today = new Date();
-                let week_jp = week[today.getDay()];
+                // const week = ['月','火','水','木','金','土','日'];
+                // let today = new Date();
+                // let week_jp = week[today.getDay()];
+                // document.write(week_jp + '曜日');
 
-                document.write(week_jp + '曜日');
+                const week_2 = ['月','火','水','木','金','土','日'];
 
-
-                
+                for(let i = 0; i <= 6; i++){
+                    document.write(week_2[i] + '曜日' + '<br>') ;
+                }
+                                
             </script>
         </div>
     </div>
