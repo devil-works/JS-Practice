@@ -14,12 +14,15 @@
 
         <div class="frame__inner">
             <script>
-              const getTax = () =>{
-                return 100 * (10 / 100);              
-              }
-
-              let tax = getTax();
-              document.write(tax);
+             const getTax = (price, tax = 10) => {
+               return Math.round( price * (tax/100));
+             }
+             let tax = getTax(1980,8);
+             console.log(tax);
+            // for(var i=0; i< 10; i++){
+            //   document.write(i + '<br>');
+            // }
+            // alert(i);
             </script>
         </div>
     </div>
