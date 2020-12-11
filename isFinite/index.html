@@ -15,12 +15,31 @@
         <h1 class="frame__title">JavaScript</h1>
         <div class="frame__inner">
             <script>
-              const cnt = parseInt(prompt(`160円の商品をいくつ購入しますか？？`));
-              if(Number.isFinite(cnt)){
-                document.write(`${160 * cnt}円です。`);
-              }else{
-                document.write(`数字で入力してください。`);
+          class Item {
+                constructor(tax){
+                  if(isFinite(tax)){
+                    this._tax = tax;
+                  }else{
+                    this._tax = 0;
+                  }
+                }
+
+                get tax(){
+                  return this._tax + '%';
+                }
+
+                set tax(tax){
+                  if(isFinite(tax)){
+                    this._tax = tax;
+                  }else{
+                    this._tax = 0;
+                  }
+                }
               }
+
+              let item = new Item(10);
+              document.write(item.tax);
+
             </script>
         </div>
     </div>
